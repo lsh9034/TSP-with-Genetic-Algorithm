@@ -1,0 +1,22 @@
+﻿  유전_미미틱.cpp
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(155): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(156): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(161): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(170): warning C4244: '+=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(191): warning C4101: 's' :참조되지 않은 지역 변수입니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(249): warning C4244: '+=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(260): warning C4101: 'sum' :참조되지 않은 지역 변수입니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(320): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(321): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(359): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(388): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(437): warning C4244: '=': 'clock_t'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(440): warning C4305: '초기화 중': 'int'에서 'float'(으)로 잘립니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(448): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(449): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(489): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(490): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(416): warning C4101: 'start2' :참조되지 않은 지역 변수입니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(549): warning C4101: 'j3' :참조되지 않은 지역 변수입니다.
+e:\documents\visual studio 2015\projects\유전&미미틱\win32project1\유전_미미틱.cpp(572): warning C4101: 'err2' :참조되지 않은 지역 변수입니다.
+  Win32Project1.vcxproj -> E:\Documents\Visual Studio 2015\Projects\유전&미미틱\Debug\Win32Project1.exe
