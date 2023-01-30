@@ -107,8 +107,6 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    return TRUE;
 }
 //Program : 유전알고리즘과 미미틱 알고리즘 구현
-//Start_Date : 2015.05.12
-//End_Date : 2015.10.10
 //Name : 이시현
 
 struct Gene
