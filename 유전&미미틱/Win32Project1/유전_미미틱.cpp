@@ -1,7 +1,5 @@
-//Program : À¯Àü¾Ë°í¸®Áò°ú ¹Ì¹ÌÆ½ ¾Ë°í¸®Áò ±¸Çö
-//Start_Date : 2015.05.12
-//End_Date : 2015.10.10
-//Name : ÀÌ½ÃÇö
+//Program : ìœ ì „ì•Œê³ ë¦¬ì¦˜ê³¼ ë¯¸ë¯¸í‹± ì•Œê³ ë¦¬ì¦˜ êµ¬í˜„
+//Name : ì´ì‹œí˜„
 
 #pragma warning(disable:4996)
 #include "stdafx.h"
@@ -33,14 +31,14 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
 
-    // TODO: ¿©±â¿¡ ÄÚµå¸¦ ÀÔ·ÂÇÕ´Ï´Ù.
+    // TODO: ì—¬ê¸°ì— ì½”ë“œë¥¼ ì…ë ¥í•©ë‹ˆë‹¤.
 
-    // Àü¿ª ¹®ÀÚ¿­À» ÃÊ±âÈ­ÇÕ´Ï´Ù.
+    // ì „ì—­ ë¬¸ìì—´ì„ ì´ˆê¸°í™”í•©ë‹ˆë‹¤.
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
     LoadStringW(hInstance, IDC_WIN32PROJECT1, szWindowClass, MAX_LOADSTRING);
     MyRegisterClass(hInstance);
 
-    // ÀÀ¿ë ÇÁ·Î±×·¥ ÃÊ±âÈ­¸¦ ¼öÇàÇÕ´Ï´Ù.
+    // ì‘ìš© í”„ë¡œê·¸ë¨ ì´ˆê¸°í™”ë¥¼ ìˆ˜í–‰í•©ë‹ˆë‹¤.
     if (!InitInstance (hInstance, nCmdShow))
     {
         return FALSE;
@@ -50,7 +48,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     MSG msg;
 
-    // ±âº» ¸Ş½ÃÁö ·çÇÁÀÔ´Ï´Ù.
+    // ê¸°ë³¸ ë©”ì‹œì§€ ë£¨í”„ì…ë‹ˆë‹¤.
     while (GetMessage(&msg, nullptr, 0, 0))
     {
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
@@ -66,9 +64,9 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
 
 //
-//  ÇÔ¼ö: MyRegisterClass()
+//  í•¨ìˆ˜: MyRegisterClass()
 //
-//  ¸ñÀû: Ã¢ Å¬·¡½º¸¦ µî·ÏÇÕ´Ï´Ù.
+//  ëª©ì : ì°½ í´ë˜ìŠ¤ë¥¼ ë“±ë¡í•©ë‹ˆë‹¤.
 //
 ATOM MyRegisterClass(HINSTANCE hInstance)
 {
@@ -93,7 +91,7 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
-   hInst = hInstance; // ÀÎ½ºÅÏ½º ÇÚµéÀ» Àü¿ª º¯¼ö¿¡ ÀúÀåÇÕ´Ï´Ù.
+   hInst = hInstance; // ì¸ìŠ¤í„´ìŠ¤ í•¸ë“¤ì„ ì „ì—­ ë³€ìˆ˜ì— ì €ì¥í•©ë‹ˆë‹¤.
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
@@ -108,10 +106,10 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    return TRUE;
 }
-//Program : À¯Àü¾Ë°í¸®Áò°ú ¹Ì¹ÌÆ½ ¾Ë°í¸®Áò ±¸Çö
+//Program : ìœ ì „ì•Œê³ ë¦¬ì¦˜ê³¼ ë¯¸ë¯¸í‹± ì•Œê³ ë¦¬ì¦˜ êµ¬í˜„
 //Start_Date : 2015.05.12
 //End_Date : 2015.10.10
-//Name : ÀÌ½ÃÇö
+//Name : ì´ì‹œí˜„
 
 struct Gene
 {
@@ -126,7 +124,7 @@ bool compare(const Gene&i, const Gene&j)
 }
 int  n = 20, k = 4, G_per = 0, ha = 0, generation = 20;
 int city = 50,time1,top_distance=987654321,low_distance;
-//n=À¯ÀüÀÚ °¹¼ö generation=¸î ¼¼´ë±îÁö °¥°ÍÀÎÁö city=µµ½Ã°¹¼ö
+//n=ìœ ì „ì ê°¯ìˆ˜ generation=ëª‡ ì„¸ëŒ€ê¹Œì§€ ê°ˆê²ƒì¸ì§€ city=ë„ì‹œê°¯ìˆ˜
 int abc = 0;
 int data1[1000][2] = { 0, };
 int child[1000][1000] = { 0, };
@@ -140,7 +138,7 @@ int low[10010][100] = { 0, };
 int ds[10010] = { 0, };
 Gene gene1[1000];
 Gene josang[1000];
-void Ds() // °Å¸®±¸ÇÏ±â ÇÔ¼ö
+void Ds() // ê±°ë¦¬êµ¬í•˜ê¸° í•¨ìˆ˜
 {
 	float x, y,distance=0;
 	int turn;
@@ -158,11 +156,11 @@ void Ds() // °Å¸®±¸ÇÏ±â ÇÔ¼ö
 			y = y*y;
 			distance += sqrt(x + y);
 		}
-		gene1[i].distance = distance;//°¢ À¯ÀüÀÚ¸¶´Ù °¢°¢ °æ·ÎÀÇ °Å¸®¸¦ ÀúÀå
+		gene1[i].distance = distance;//ê° ìœ ì „ìë§ˆë‹¤ ê°ê° ê²½ë¡œì˜ ê±°ë¦¬ë¥¼ ì €ì¥
 		distance = 0;
 	}
 }
-void rule()//·ê·¿ÈÙ±â¹ıÀ¸·Î ¹üÀ§ÁöÁ¤(ÁÁÀº À¯ÀüÀÚÀÏ¼ö·Ï ¹üÀ§°¡³ĞÀ½)
+void rule()//ë£°ë ›íœ ê¸°ë²•ìœ¼ë¡œ ë²”ìœ„ì§€ì •(ì¢‹ì€ ìœ ì „ìì¼ìˆ˜ë¡ ë²”ìœ„ê°€ë„“ìŒ)
 {
 	for (int i = n-1; i>=0; i--)
 	{
@@ -170,7 +168,7 @@ void rule()//·ê·¿ÈÙ±â¹ıÀ¸·Î ¹üÀ§ÁöÁ¤(ÁÁÀº À¯ÀüÀÚÀÏ¼ö·Ï ¹üÀ§°¡³ĞÀ½)
 		G_per += gene1[i].per;
 	}
 }
-void modification(int t) //º¯ÀÌ ¿¬»ê
+void modification(int t) //ë³€ì´ ì—°ì‚°
 {
 	int pos = rand() % city;
 	int num = rand() % city + 1;
@@ -185,15 +183,15 @@ void modification(int t) //º¯ÀÌ ¿¬»ê
 		}
 	}
 }
-void setchild(int house[],int t)//±³Â÷ ¿¬»ê
+void setchild(int house[],int t)//êµì°¨ ì—°ì‚°
 {
-	int a = rand() % city;  //Àı´Ü¼±1
-	int b=rand()%city, p, s,count=0;   //Àı´Ü¼± 2 
+	int a = rand() % city;  //ì ˆë‹¨ì„ 1
+	int b=rand()%city, p, s,count=0;   //ì ˆë‹¨ì„  2 
 	int modi = rand() % 1000;
 	int min = min(a, b);
 	int max = max(a, b);
 
-	for (p=min; p <=max; p++)//Á¤ÇØ³õÀº Àı´Ü¼± »çÀÌ¿¡ ÀÖ´Â µµ½Ã¸¦ Ã¼Å©
+	for (p=min; p <=max; p++)//ì •í•´ë†“ì€ ì ˆë‹¨ì„  ì‚¬ì´ì— ìˆëŠ” ë„ì‹œë¥¼ ì²´í¬
 	{
 		int imsi = gene1[house[0]].turn[p];
 		for (int imsi2 = 0; imsi2 < city; imsi2++)
@@ -207,7 +205,7 @@ void setchild(int house[],int t)//±³Â÷ ¿¬»ê
 	}
 
 	int q;
-	for (q = 0; q < city; q++) //Àı´Ü¼± 1,2¹Ù±ùÂÊ¿¡ ÀÖ´Â µµ½Ãµé ÀÚ½Ä¿¡°Ô À¯Àü
+	for (q = 0; q < city; q++) //ì ˆë‹¨ì„  1,2ë°”ê¹¥ìª½ì— ìˆëŠ” ë„ì‹œë“¤ ìì‹ì—ê²Œ ìœ ì „
 	{
 		if (gene1[house[1]].turn[q] < 0)
 		{
@@ -221,12 +219,12 @@ void setchild(int house[],int t)//±³Â÷ ¿¬»ê
 		}
 	}
 
-	for (count; count <= max; count++) //Àı´Ü¼±1,2»çÀÌ¿¡ ÀÖ´Â µµ½Ã À¯Àü
+	for (count; count <= max; count++) //ì ˆë‹¨ì„ 1,2ì‚¬ì´ì— ìˆëŠ” ë„ì‹œ ìœ ì „
 	{
 		child[t][count] = gene1[house[0]].turn[count];
 		if (house[0] == house[1])child[t][count] *= -1;
 	}
-	for (q = 0; q < city; q++) //Áßº¹µÈ µµ½Ã ¼öÁ¤
+	for (q = 0; q < city; q++) //ì¤‘ë³µëœ ë„ì‹œ ìˆ˜ì •
 	{
 		if (gene1[house[1]].turn[q]>0)
 		{
@@ -240,10 +238,10 @@ void setchild(int house[],int t)//±³Â÷ ¿¬»ê
 		modification(t);
 	}
 }
-void choice(int house[],int t)//¼±ÅÃ ¿¬»ê
+void choice(int house[],int t)//ì„ íƒ ì—°ì‚°
 {
 	int sum = 0;
-	int arrow = (((long)rand() << 15) | rand()) % G_per; //·£µå°ª ¹üÀ§ ³ĞÈù°ÅÀÓ
+	int arrow = (((long)rand() << 15) | rand()) % G_per; //ëœë“œê°’ ë²”ìœ„ ë„“íŒê±°ì„
 	for (int j = n - 1; j >= 0; j--)
 	{
 		sum += gene1[j].per;
@@ -254,17 +252,17 @@ void choice(int house[],int t)//¼±ÅÃ ¿¬»ê
 		}
 	}
 }
-void choice_cross_set() //¼±ÅÃ & ±³Â÷ & ´ëÄ¡
+void choice_cross_set() //ì„ íƒ & êµì°¨ & ëŒ€ì¹˜
 {
 	int house[2] = { 0, };
 	int sum;
 	int i;
-	for (i = 0; i < n - 2; i++)  //·ê·¿ÈÙ±â¹ıÀ¸·Î °æ·Î°¡ ÂªÀº À¯ÀüÀÚÀÏ¼ö·Ï °É¸±È®·üÀÌ ³ô¾ÆÁö¸ç
-	{							 //ÀÌ for¹®ÀÌ ·£´ıÀ¸·Î À¯ÀüÀÚ2°³¸¦ ¼±ÅÃÇÏ°í ¼­·Î °æ·Î¸¦ ¼¯´Â±¸¹®ÀÌ´Ù.
+	for (i = 0; i < n - 2; i++)  //ë£°ë ›íœ ê¸°ë²•ìœ¼ë¡œ ê²½ë¡œê°€ ì§§ì€ ìœ ì „ìì¼ìˆ˜ë¡ ê±¸ë¦´í™•ë¥ ì´ ë†’ì•„ì§€ë©°
+	{							 //ì´ forë¬¸ì´ ëœë¤ìœ¼ë¡œ ìœ ì „ì2ê°œë¥¼ ì„ íƒí•˜ê³  ì„œë¡œ ê²½ë¡œë¥¼ ì„ëŠ”êµ¬ë¬¸ì´ë‹¤.
 		int r = rand() % 100;
 		choice(house, 0);
 
-		for (;; ha++) // µ¿ÀÏÇÑ ºÎ¸ğ°¡ ¼±ÅÃµÇÁö ¾ÊÀ» ¶§±îÁö ¹«ÇÑ·çÇÁ¸¦ µµ´Â ±¸¹®
+		for (;; ha++) // ë™ì¼í•œ ë¶€ëª¨ê°€ ì„ íƒë˜ì§€ ì•Šì„ ë•Œê¹Œì§€ ë¬´í•œë£¨í”„ë¥¼ ë„ëŠ” êµ¬ë¬¸
 		{
 			choice(house, 1);
 			if (house[0] != house[1])break;
@@ -280,9 +278,9 @@ void choice_cross_set() //¼±ÅÃ & ±³Â÷ & ´ëÄ¡
 		count2++;
 
 		if (r < 70)
-			setchild(house, i); //ºÎ¸ğ ±³Â÷
+			setchild(house, i); //ë¶€ëª¨ êµì°¨
 
-		else // 30%ÀÇ È®·ü·Î ±³¹è¸¦ ÇÏÁö ¾Ê°í ºÎ¸ğ¸¦ ±×´ë·Î º¹»ç
+		else // 30%ì˜ í™•ë¥ ë¡œ êµë°°ë¥¼ í•˜ì§€ ì•Šê³  ë¶€ëª¨ë¥¼ ê·¸ëŒ€ë¡œ ë³µì‚¬
 		{
 			int r2 = rand() % 2;
 			for (int j = 0; j < city; j++)
@@ -291,12 +289,12 @@ void choice_cross_set() //¼±ÅÃ & ±³Â÷ & ´ëÄ¡
 			}
 		}
 	}
-	for (int j = 0; j < city; j++)   //ÀÚ½ÄµéÀ» ³ºÁö¸¸ ÇöÀç¼¼´ë¿¡¼­ °¡Àå ÁÁÀº 2°³ÀÇ À¯ÀüÀÚ´Â º¸Á¸ÇØ¼­ ´ÙÀ½¼¼´ë·Î³Ñ±è
+	for (int j = 0; j < city; j++)   //ìì‹ë“¤ì„ ë‚³ì§€ë§Œ í˜„ì¬ì„¸ëŒ€ì—ì„œ ê°€ì¥ ì¢‹ì€ 2ê°œì˜ ìœ ì „ìëŠ” ë³´ì¡´í•´ì„œ ë‹¤ìŒì„¸ëŒ€ë¡œë„˜ê¹€
 	{
 		child[i][j] = gene1[0].turn[j];
 		child[i + 1][j] = gene1[1].turn[j];
 	}
-	for (int i = 0; i < n; i++) //¼¼´ë±³Ã¼
+	for (int i = 0; i < n; i++) //ì„¸ëŒ€êµì²´
 	{
 		for (int j = 0; j < city; j++)
 		{
@@ -305,7 +303,7 @@ void choice_cross_set() //¼±ÅÃ & ±³Â÷ & ´ëÄ¡
 		}
 	}
 }
-void graph(int x_length,HDC hdc)  //º¯È­·® ±×·¡ÇÁ 
+void graph(int x_length,HDC hdc)  //ë³€í™”ëŸ‰ ê·¸ë˜í”„ 
 {
 	int y_length = low_distance - top_distance;
 	int y = 200, x = 380;
@@ -321,16 +319,16 @@ void graph(int x_length,HDC hdc)  //º¯È­·® ±×·¡ÇÁ
 		MoveToEx(hdc, x3 + imsi2, y3 - imsi, NULL);
 	}
 }
-void cp(int abc) //¸ğµç ¼¼´ë¸¦ ÅëÆ²¾î °¡Àå ÁÁÀº À¯ÀüÀÚ¿Í ³ª»Û À¯ÀüÀÚ¸¦ ±â¾ïÇÏ´Â ÇÔ¼ö
+void cp(int abc) //ëª¨ë“  ì„¸ëŒ€ë¥¼ í†µí‹€ì–´ ê°€ì¥ ì¢‹ì€ ìœ ì „ìì™€ ë‚˜ìœ ìœ ì „ìë¥¼ ê¸°ì–µí•˜ëŠ” í•¨ìˆ˜
 {
 	if (top[abc][city] < top_distance)top_distance = top[abc][city];
 	if (low[abc][city]>low_distance)low_distance = low[abc][city];
 }
-std::vector<std::vector<int>> make_graph(std::vector<std::vector<int>> graph,int i) // À¯ÀüÀÚÀÇ ¿°·ÏÃ¼¸¦ ±×·¡ÇÁ·Î ÀÎ½ÄÇØ¼­ Vector¿¡ ÀÎÁ¢Çà·Ä·Î ¸¸µå´Â ÇÔ¼ö
+std::vector<std::vector<int>> make_graph(std::vector<std::vector<int>> graph,int i) // ìœ ì „ìì˜ ì—¼ë¡ì²´ë¥¼ ê·¸ë˜í”„ë¡œ ì¸ì‹í•´ì„œ Vectorì— ì¸ì ‘í–‰ë ¬ë¡œ ë§Œë“œëŠ” í•¨ìˆ˜
 {
-	int s, e;//»ç½Ç ¹æÇâÀº ¾øÀ½
-	for (int j = 0; j < city; j++) //°£¼± Ãß°¡ ÇÒ ¶§ »ı±â´Â ºÎºĞ½ÎÀÌÅ¬ÀÇ Ã¹ °£¼±À»
-									//Á¦°ÅÇÏ´Â ÀÛ¾÷À» À§ÇÑ »çÀü ±×·¡ÇÁ ¸¸µé±â(¹æ¹ı¼³¸í ¹Ø¿¡ ÇØµÒ)
+	int s, e;//ì‚¬ì‹¤ ë°©í–¥ì€ ì—†ìŒ
+	for (int j = 0; j < city; j++) //ê°„ì„  ì¶”ê°€ í•  ë•Œ ìƒê¸°ëŠ” ë¶€ë¶„ì‹¸ì´í´ì˜ ì²« ê°„ì„ ì„
+									//ì œê±°í•˜ëŠ” ì‘ì—…ì„ ìœ„í•œ ì‚¬ì „ ê·¸ë˜í”„ ë§Œë“¤ê¸°(ë°©ë²•ì„¤ëª… ë°‘ì— í•´ë‘ )
 	{
 		s = gene1[i].turn[j];
 		if (j == city - 1)e = gene1[i].turn[0];
@@ -340,7 +338,7 @@ std::vector<std::vector<int>> make_graph(std::vector<std::vector<int>> graph,int
 	}
 	return graph;
 }
-int bfs(std::vector<std::vector<int>> graph, int i)//¸ğµç µµ½Ã°¡ ÇÏ³ªÀÇ ±×·ìÀÎÁö È®ÀÎÇÏ±â À§ÇÑ ÇÔ¼ö
+int bfs(std::vector<std::vector<int>> graph, int i)//ëª¨ë“  ë„ì‹œê°€ í•˜ë‚˜ì˜ ê·¸ë£¹ì¸ì§€ í™•ì¸í•˜ê¸° ìœ„í•œ í•¨ìˆ˜
 {
 	using namespace std;
 	queue<int> q;
@@ -349,10 +347,10 @@ int bfs(std::vector<std::vector<int>> graph, int i)//¸ğµç µµ½Ã°¡ ÇÏ³ªÀÇ ±×·ìÀÎÁö
 	for (int j = 0; j < city; j++)
 	{
 		if (check[gene1[i].turn[j]] == 1)continue;
-		q.push(gene1[i].turn[j]); //Ã³À½ Å¥¿¡ µé¾î°¡´Â µµ½Ã´Â s¿Í °°¾Æ¾ßÇÑ´Ù.
-									//Áö±İÀº ´ÙÇàÈ÷ j°¡ 0ºÎÅÍ µ¹¾Æ¼­ Ç×»ó s¿Í °°À½
+		q.push(gene1[i].turn[j]); //ì²˜ìŒ íì— ë“¤ì–´ê°€ëŠ” ë„ì‹œëŠ” sì™€ ê°™ì•„ì•¼í•œë‹¤.
+									//ì§€ê¸ˆì€ ë‹¤í–‰íˆ jê°€ 0ë¶€í„° ëŒì•„ì„œ í•­ìƒ sì™€ ê°™ìŒ
 		check[gene1[i].turn[j]] = 1;
-		while (!q.empty()) // ±×·¡ÇÁ ¼øÈ¸
+		while (!q.empty()) // ê·¸ë˜í”„ ìˆœíšŒ
 		{
 			int s = q.front();
 			q.pop();
@@ -367,7 +365,7 @@ int bfs(std::vector<std::vector<int>> graph, int i)//¸ğµç µµ½Ã°¡ ÇÏ³ªÀÇ ±×·ìÀÎÁö
 	}
 	return group;
 }
-void bfs2(std::vector<std::vector<int>> graph, int *turn, int i)//±×·¡ÇÁ¸¦ ¼øÈ¸ÇÏ¸é¼­ Áö¿ªÃÖÀûÈ­ÇÑ °á°ú¸¦ ¿°·ÏÃ¼¿¡ ³Ö´Â ±¸¹®
+void bfs2(std::vector<std::vector<int>> graph, int *turn, int i)//ê·¸ë˜í”„ë¥¼ ìˆœíšŒí•˜ë©´ì„œ ì§€ì—­ìµœì í™”í•œ ê²°ê³¼ë¥¼ ì—¼ë¡ì²´ì— ë„£ëŠ” êµ¬ë¬¸
 {
 	using namespace std;
 	queue<int> q;
@@ -376,11 +374,11 @@ void bfs2(std::vector<std::vector<int>> graph, int *turn, int i)//±×·¡ÇÁ¸¦ ¼øÈ¸Ç
 	for (int j = 0; j < city; j++)
 	{
 		if (check[gene1[i].turn[j]] == 1)continue;
-		q.push(gene1[i].turn[j]); //Ã³À½ Å¥¿¡ µé¾î°¡´Â µµ½Ã´Â lin_kernighanÇÔ¼öÀÇ s¿Í °°¾Æ¾ßÇÑ´Ù. 
-									//Áö±İÀº ´ÙÇàÈ÷ j°¡ 0ºÎÅÍ µ¹¾Æ¼­ Ç×»ó s¿Í °°À½
+		q.push(gene1[i].turn[j]); //ì²˜ìŒ íì— ë“¤ì–´ê°€ëŠ” ë„ì‹œëŠ” lin_kernighaní•¨ìˆ˜ì˜ sì™€ ê°™ì•„ì•¼í•œë‹¤. 
+									//ì§€ê¸ˆì€ ë‹¤í–‰íˆ jê°€ 0ë¶€í„° ëŒì•„ì„œ í•­ìƒ sì™€ ê°™ìŒ
 		check[gene1[i].turn[j]] = 1;
 		int count = 0;
-		while (!q.empty()) // ±×·¡ÇÁ ¼øÈ¸ ¹× ¿°·ÏÃ¼¿¡ ´ëÀÔ
+		while (!q.empty()) // ê·¸ë˜í”„ ìˆœíšŒ ë° ì—¼ë¡ì²´ì— ëŒ€ì…
 		{
 			int s = q.front();
 			q.pop();
@@ -395,7 +393,7 @@ void bfs2(std::vector<std::vector<int>> graph, int *turn, int i)//±×·¡ÇÁ¸¦ ¼øÈ¸Ç
 		group++;
 	}
 }
-void Erase(std::vector<int> *i,std::vector<int> *j, int X, int Y)//°£¼± Áö¿ì±â
+void Erase(std::vector<int> *i,std::vector<int> *j, int X, int Y)//ê°„ì„  ì§€ìš°ê¸°
 {
 	std::vector<int>::iterator it;
 	it = find(i->begin(), i->end(), Y);
@@ -403,11 +401,11 @@ void Erase(std::vector<int> *i,std::vector<int> *j, int X, int Y)//°£¼± Áö¿ì±â
 	it = std::find(j->begin(),j->end(), X);
 	j->erase(it);
 }
-//½ÎÀÌÅ¬ÀÇ Ã¹ °£¼± ¾ø¾Ö´Â ¹ı: ¿ì¼± À§¿¡¼­ ¸¸µé¾î µĞ ±×·¡ÇÁ¸¦ ¾¸. ±×¸®°í °£¼±ÀÌ ÀÌ¾îÁ³À» ¶§ ½ÎÀÌÅ¬ÀÌ »ı±â°í ³­ µÚ ÀÌÀº °£¼± Á¦¿Ü ÀÎÁ¢ÇÑ °£¼± Áß ¾Æ¹«°Å³ª ÇÏ³ª Á¦°Å ±× µÚ
-//bfs¸¦ µ¹¾Æ ±×·ì 2°³ ³ª¿À¸é ½ÎÀÌÅ¬ÀÌ ¾È ¾ø¾îÁ³´Ù´Â °ÅÀÓ 1°³¸é ¾ø¾îÁø°ÅÀÓ ±×¸®°í ÀÎÁ¢ÇÑ °£¼± ¾Æ¹«°Å³ª Á¦°Å ÇÒ ¶§´Â »õ·Î ÀÌÀº °£¼±ÀÌ Çª½Ã¹éÀ¸·Î µÚ¿¡ µé¾î°¡±â
-//¶§¹®¿¡ ¸Ç ¾Õ¿¡²¨ Á¦°ÅÇÏ¸é Àı´ë »õ·Î ÀÌÀº °£¼±Àº ¾ø¾ÖÁö ¾ÊÀ½
+//ì‹¸ì´í´ì˜ ì²« ê°„ì„  ì—†ì• ëŠ” ë²•: ìš°ì„  ìœ„ì—ì„œ ë§Œë“¤ì–´ ë‘” ê·¸ë˜í”„ë¥¼ ì”€. ê·¸ë¦¬ê³  ê°„ì„ ì´ ì´ì–´ì¡Œì„ ë•Œ ì‹¸ì´í´ì´ ìƒê¸°ê³  ë‚œ ë’¤ ì´ì€ ê°„ì„  ì œì™¸ ì¸ì ‘í•œ ê°„ì„  ì¤‘ ì•„ë¬´ê±°ë‚˜ í•˜ë‚˜ ì œê±° ê·¸ ë’¤
+//bfsë¥¼ ëŒì•„ ê·¸ë£¹ 2ê°œ ë‚˜ì˜¤ë©´ ì‹¸ì´í´ì´ ì•ˆ ì—†ì–´ì¡Œë‹¤ëŠ” ê±°ì„ 1ê°œë©´ ì—†ì–´ì§„ê±°ì„ ê·¸ë¦¬ê³  ì¸ì ‘í•œ ê°„ì„  ì•„ë¬´ê±°ë‚˜ ì œê±° í•  ë•ŒëŠ” ìƒˆë¡œ ì´ì€ ê°„ì„ ì´ í‘¸ì‹œë°±ìœ¼ë¡œ ë’¤ì— ë“¤ì–´ê°€ê¸°
+//ë•Œë¬¸ì— ë§¨ ì•ì—êº¼ ì œê±°í•˜ë©´ ì ˆëŒ€ ìƒˆë¡œ ì´ì€ ê°„ì„ ì€ ì—†ì• ì§€ ì•ŠìŒ
 
-//µµ½Ãµ¥ÀÌÅÍ´Â µµ½Ã¹øÈ£ÀÇ -1
+//ë„ì‹œë°ì´í„°ëŠ” ë„ì‹œë²ˆí˜¸ì˜ -1
 void Lin_Kernighan()
 {
 	printf("----------------------------------------------------------\n");
@@ -420,29 +418,29 @@ void Lin_Kernighan()
 		printf("\n");
 		vector<int> lock(city+1, 0);
 		vector<vector<int>> graph(city+1, vector<int>(0, 0));
-		vector<vector<int>> past(city + 1, vector<int>(3, 0)); //0¹øÁö´Â »õ·Î »ı±ä°Å 1¹øÁö´Â ¾ø¾Ø°Å (µ¹¾Æ°¥¶§ º¹±¸ÇÏ±â À§ÇØ ÀúÀå)
-		vector<vector<int>> cut(city+1);   //Á¤Á¡ÀÌ Àß¸²À» ´çÇÒ ¶§ ÀÚ½ÅÀ» ÀÚ¸¥ Á¤Á¡À» ÀúÀåÇÏ´Â ¹è¿­(ÀÚ½ÅÀ» ÀÚ¸£´Â Á¤Á¡Àº ¿©·¯°³°¡ ³ª¿Ã ¼ö ÀÖ´Ù ¿Ö³Ä¸é 2°³¶û ÀÌ¾îÁ®ÀÖ±â ¶§¹® ÇÏÁö¸¸ 2°³ÀÌ»ó »õ·Î ¸¸µç °£¼±ÀÌ ´Ù½Ã Àß¸± ¼ö µµ ÀÖ¾î¼­
+		vector<vector<int>> past(city + 1, vector<int>(3, 0)); //0ë²ˆì§€ëŠ” ìƒˆë¡œ ìƒê¸´ê±° 1ë²ˆì§€ëŠ” ì—†ì•¤ê±° (ëŒì•„ê°ˆë•Œ ë³µêµ¬í•˜ê¸° ìœ„í•´ ì €ì¥)
+		vector<vector<int>> cut(city+1);   //ì •ì ì´ ì˜ë¦¼ì„ ë‹¹í•  ë•Œ ìì‹ ì„ ìë¥¸ ì •ì ì„ ì €ì¥í•˜ëŠ” ë°°ì—´(ìì‹ ì„ ìë¥´ëŠ” ì •ì ì€ ì—¬ëŸ¬ê°œê°€ ë‚˜ì˜¬ ìˆ˜ ìˆë‹¤ ì™œëƒë©´ 2ê°œë‘ ì´ì–´ì ¸ìˆê¸° ë•Œë¬¸ í•˜ì§€ë§Œ 2ê°œì´ìƒ ìƒˆë¡œ ë§Œë“  ê°„ì„ ì´ ë‹¤ì‹œ ì˜ë¦´ ìˆ˜ ë„ ìˆì–´ì„œ
 		vector<int>::iterator it;
 		graph = make_graph(graph,i);
-		int s = gene1[i].turn[0]; //s´Â ¹«Á¶°Ç 1°³ÀÇ Á¤Á¡°ú ÀÌ¾îÁ®ÀÖ´Ù. ±×·¯¹Ç·Î turnÀ» °»½ÅÇÒ ¶§ bfs¸¦ sºÎÅÍ µ¹¸é µÊ.
+		int s = gene1[i].turn[0]; //sëŠ” ë¬´ì¡°ê±´ 1ê°œì˜ ì •ì ê³¼ ì´ì–´ì ¸ìˆë‹¤. ê·¸ëŸ¬ë¯€ë¡œ turnì„ ê°±ì‹ í•  ë•Œ bfsë¥¼ së¶€í„° ëŒë©´ ë¨.
 		int u = gene1[i].turn[1];
-		Erase(&graph[s], &graph[u], s, u); //Ã³À½ ½ÃÀÛ½Ã °£¼±ÇÏ³ª Áö¿ì°í ½ÃÀÛ
-		cut[u].push_back(s); // ³ªÁß¿¡ ´Ù½Ã µ¹¾Æ¿Í¾ß ÇÏ¹Ç·Î µ¹¾Æ¿Ã ¶§ ÇÊ¿äÇÑ Á¤º¸¸¦ ÀúÀå
+		Erase(&graph[s], &graph[u], s, u); //ì²˜ìŒ ì‹œì‘ì‹œ ê°„ì„ í•˜ë‚˜ ì§€ìš°ê³  ì‹œì‘
+		cut[u].push_back(s); // ë‚˜ì¤‘ì— ë‹¤ì‹œ ëŒì•„ì™€ì•¼ í•˜ë¯€ë¡œ ëŒì•„ì˜¬ ë•Œ í•„ìš”í•œ ì •ë³´ë¥¼ ì €ì¥
 		past[s][0] = -1;
 		past[s][1] = u;
 		lock[s] = 1;
 		float max = -1;
 		float gain = 0;
-		int X,Y,K=1;//K´Â ¸¸¾à max°¡ À½¼ö¶ó¸é °³¼±ÀÌ µÈ°Ô ÇÏ³ªµµ ¾øÀ½À¸·Î Ã³À½À¸·Î µÇµ¹¾Æ°¡¾ßÇÏ±â¶§¹®¿¡ 1·Î¹øÁö·ÎÇØ³õÀº°ÅÀÓ
+		int X,Y,K=1;//KëŠ” ë§Œì•½ maxê°€ ìŒìˆ˜ë¼ë©´ ê°œì„ ì´ ëœê²Œ í•˜ë‚˜ë„ ì—†ìŒìœ¼ë¡œ ì²˜ìŒìœ¼ë¡œ ë˜ëŒì•„ê°€ì•¼í•˜ê¸°ë•Œë¬¸ì— 1ë¡œë²ˆì§€ë¡œí•´ë†“ì€ê±°ì„
 		start = clock();
-		for (int a = 2; a <= city; a++)//Ã³À½¿¡ µµ½ÃÇÏ³ª ¶ô°É°í ½ÃÀÛÇØ¼­ 1°³ ÁÙÀÓ
+		for (int a = 2; a <= city; a++)//ì²˜ìŒì— ë„ì‹œí•˜ë‚˜ ë½ê±¸ê³  ì‹œì‘í•´ì„œ 1ê°œ ì¤„ì„
 		{
 			float min = 987654321;
 			int near1 = graph[u][0];
 			int near2 = -1;
 			float dis;
 			if(graph[u].size()>1)near2 = graph[u][1];
-			for (int j = 0; j < city; j++) //µµ½Ã ¹øÈ£°¡ ´ã°ÜÀÖ´Â ÀÎµ¦½º¹øÈ£°¡ j  Àı´ë turn¿¡ ÀÖ´Â µµ½Ã ¼øÀÌ ¾Æ´Ñ 1¹øºÎÅÍ city¹ø±îÁö ¼øÂ÷ ¹æ¹®ÀÓ(µµ½Ã¹øÈ£´Â j+1)
+			for (int j = 0; j < city; j++) //ë„ì‹œ ë²ˆí˜¸ê°€ ë‹´ê²¨ìˆëŠ” ì¸ë±ìŠ¤ë²ˆí˜¸ê°€ j  ì ˆëŒ€ turnì— ìˆëŠ” ë„ì‹œ ìˆœì´ ì•„ë‹Œ 1ë²ˆë¶€í„° cityë²ˆê¹Œì§€ ìˆœì°¨ ë°©ë¬¸ì„(ë„ì‹œë²ˆí˜¸ëŠ” j+1)
 			{
 				if (lock[j + 1] == 1 || j + 1 == u || near1 == j + 1 || near2 == j + 2)continue;
 				float x = (data1[u - 1][0] - data1[j][0]);
@@ -478,7 +476,7 @@ void Lin_Kernighan()
 				qwer = 1;
 			}
 			Erase(&graph[X], &graph[Y], X, Y);
-			int group = bfs(graph, i); //°£¼± ÇÏ³ª Áö¿öº¸°í ±×·ì 2°³³ª¿À¸é »çÀÌÅ¬ÀÌ ¾ÆÁ÷ Á¸ÀçÇÏ¹Ç·Î ´Ù½Ã ÀÕ°í ´Ù¸¥ ÀÎÁ¢ÇÑ °£¼±À» Áö¿ò
+			int group = bfs(graph, i); //ê°„ì„  í•˜ë‚˜ ì§€ì›Œë³´ê³  ê·¸ë£¹ 2ê°œë‚˜ì˜¤ë©´ ì‚¬ì´í´ì´ ì•„ì§ ì¡´ì¬í•˜ë¯€ë¡œ ë‹¤ì‹œ ì‡ê³  ë‹¤ë¥¸ ì¸ì ‘í•œ ê°„ì„ ì„ ì§€ì›€
 			if (group == 2)
 			{
 				graph[X].push_back(Y);
@@ -499,17 +497,17 @@ void Lin_Kernighan()
 			}
 			past[X][0] = u;
 			past[X][1] = Y;
-			cut[Y].push_back(X); //Àß¸²À» ´çÇÑ Y°¡ ÀÚ½ÅÀ» ÀÚ¸¥ X¸¦ ÀúÀå
+			cut[Y].push_back(X); //ì˜ë¦¼ì„ ë‹¹í•œ Yê°€ ìì‹ ì„ ìë¥¸ Xë¥¼ ì €ì¥
 			u = Y;
 			lock[X] = 1;
 		}
-		if (max < 0)K = 1; //ÀÌµæÀÌ ÃÖ´ë¿´À» ¶§µµ À½¼ö¸é ¿ø»óÅÂ·Î µÇµ¹¾Æ°¡±â
+		if (max < 0)K = 1; //ì´ë“ì´ ìµœëŒ€ì˜€ì„ ë•Œë„ ìŒìˆ˜ë©´ ì›ìƒíƒœë¡œ ë˜ëŒì•„ê°€ê¸°
 		for (int z = city; z > K; z--)
 		{
-			X = cut[Y][cut[Y].size()-1]; //¸¶Áö¸· ¼ıÀÚ
+			X = cut[Y][cut[Y].size()-1]; //ë§ˆì§€ë§‰ ìˆ«ì
 			u = past[X][0];
 			Y = past[X][1];
-			if(u!=-1)Erase(&graph[u], &graph[X], u, X);  //u=-1Àº Ã³À½ ½ÃÀÛ Á¤Á¡ÀÌ¶ó ³ªÇÑÅ× ¿Â °£¼±ÀÌ ¾øÀ½
+			if(u!=-1)Erase(&graph[u], &graph[X], u, X);  //u=-1ì€ ì²˜ìŒ ì‹œì‘ ì •ì ì´ë¼ ë‚˜í•œí…Œ ì˜¨ ê°„ì„ ì´ ì—†ìŒ
 			else
 			{
 				Erase(&graph[X], &graph[*graph[X].begin()], X, *graph[X].begin());
@@ -529,15 +527,15 @@ void start()
 	freopen("output.txt", "w", stdout);
 	int start = clock();
 	using namespace std;
-	for (int i2 = 0; i2 < generation; i2++)  //À¯ÀüÀÚ ÀüºÎµ¼
+	for (int i2 = 0; i2 < generation; i2++)  //ìœ ì „ì ì „ë¶€ë”
 	{
 		G_per = 0;
 		if (memetic)Lin_Kernighan();
 
-		Ds(); //°¢À¯ÀüÀÚ¸¶´Ù °¡Áö°íÀÖ´Â °æ·Î°Å¸® ±¸ÇÏ±â ÇÔ¼ö
-		std::sort(gene1, gene1 + n, compare); // Á¤·ÄÀÌÀûÇÕµµÇÔ¼ö °Å¸®·Î ÂªÀº ¼øÀ¸·Î ¼øÀ§ÁöÁ¤
-											  //¿©±â±îÁö°¡  À¯ÀüÀÚ¸¶´Ù °Å¸®±îÁö ±¸ÇÑ°Í
-		rule();//·ê·¿ ¹üÀ§ ÁöÁ¤
+		Ds(); //ê°ìœ ì „ìë§ˆë‹¤ ê°€ì§€ê³ ìˆëŠ” ê²½ë¡œê±°ë¦¬ êµ¬í•˜ê¸° í•¨ìˆ˜
+		std::sort(gene1, gene1 + n, compare); // ì •ë ¬ì´ì í•©ë„í•¨ìˆ˜ ê±°ë¦¬ë¡œ ì§§ì€ ìˆœìœ¼ë¡œ ìˆœìœ„ì§€ì •
+											  //ì—¬ê¸°ê¹Œì§€ê°€  ìœ ì „ìë§ˆë‹¤ ê±°ë¦¬ê¹Œì§€ êµ¬í•œê²ƒ
+		rule();//ë£°ë › ë²”ìœ„ ì§€ì •
 		if (G_per == 0)break;
 		for (int j2 = 0; j2 < city; j2++)
 		{
@@ -548,7 +546,7 @@ void start()
 		low[i2][city] = gene1[n - 1].distance;
 		int j3;
 		ds[i2] = gene1[0].distance;
-		choice_cross_set();//¼±ÅÃÇÏ°í ±³¹èÇÏ°í Àû¿ë±îÁö
+		choice_cross_set();//ì„ íƒí•˜ê³  êµë°°í•˜ê³  ì ìš©ê¹Œì§€
 	}
 	int start2 = clock();
 	time1 = start2 - start;
@@ -575,17 +573,17 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		srand((unsigned)time(NULL));
 		for (int i = 0; i < city; i++)
 		{
-			scanf_s("%d %d", &data1[i][0], &data1[i][1]); //Á¤Á¡ ÁÂÇ¥ÀÔ·Â¹Ş´Â°÷(·£´ı»ı¼º)
+			scanf_s("%d %d", &data1[i][0], &data1[i][1]); //ì •ì  ì¢Œí‘œì…ë ¥ë°›ëŠ”ê³³(ëœë¤ìƒì„±)
 		}
 		for (int i = 0; i < n; i++)
 		{
 			for (int j = 0; j < city; j++)	
 			{
-				scanf_s("%d", &gene1[i].turn[j]); //ÃÊ±â¿¡ ·£´ıÀ¸·Î »ı¼ºµÈ °æ·ÎµéÀ» ÀÔ·Â¹Ş´Â°÷ ·£´ı»ı¼ºÀº ´Ù¸¥ÇÁ·Î±×·¥À¸·Î »ı¼ºÇßÀ½ 
+				scanf_s("%d", &gene1[i].turn[j]); //ì´ˆê¸°ì— ëœë¤ìœ¼ë¡œ ìƒì„±ëœ ê²½ë¡œë“¤ì„ ì…ë ¥ë°›ëŠ”ê³³ ëœë¤ìƒì„±ì€ ë‹¤ë¥¸í”„ë¡œê·¸ë¨ìœ¼ë¡œ ìƒì„±í–ˆìŒ 
 			}
-			josang[i] = gene1[i];                //¸®¼Â¹öÆ°´©¸¦‹š¸¦´ëºñÇØ¼­ Ã³À½ µ¥ÀÌÅÍ ÀúÀåÇØ³õ´Â±¸¹®
+			josang[i] = gene1[i];                //ë¦¬ì…‹ë²„íŠ¼ëˆ„ë¥¼Â‹Âšë¥¼ëŒ€ë¹„í•´ì„œ ì²˜ìŒ ë°ì´í„° ì €ì¥í•´ë†“ëŠ”êµ¬ë¬¸
 		}
-		start();                          //¾Ë°í¸®Áò ½ÃÀÛ
+		start();                          //ì•Œê³ ë¦¬ì¦˜ ì‹œì‘
 		fclose(stream);
 	}
     case WM_COMMAND:
@@ -612,7 +610,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 				break;
 			}
             int wmId = LOWORD(wParam);
-            // ¸Ş´º ¼±ÅÃÀ» ±¸¹® ºĞ¼®ÇÕ´Ï´Ù.
+            // ë©”ë‰´ ì„ íƒì„ êµ¬ë¬¸ ë¶„ì„í•©ë‹ˆë‹¤.
             switch (wmId)
             {
             case IDM_ABOUT:
@@ -624,7 +622,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
         }
         //break;
-    case WM_PAINT:   //±×¸®´Â°÷
+    case WM_PAINT:   //ê·¸ë¦¬ëŠ”ê³³
         {
 			PAINTSTRUCT ps;
 			HDC hdc = BeginPaint(hWnd, &ps);
@@ -644,7 +642,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			wsprintf(gr, TEXT("generation: %d"), abc+1);
 			TextOut(hdc, 550, 300, gr, lstrlen(gr));
 
-			wsprintf(Dis, TEXT("Distance: %d (¾Ë°í¸®Áò Á¾·áµÉ‹š°¡Áö °¡ÀåÂªÀº °æ·Î)"), ds[generation-1]);
+			wsprintf(Dis, TEXT("Distance: %d (ì•Œê³ ë¦¬ì¦˜ ì¢…ë£Œë Â‹Âšê°€ì§€ ê°€ì¥ì§§ì€ ê²½ë¡œ)"), ds[generation-1]);
 			TextOut(hdc, 550, 350, Dis, lstrlen(Dis));
 
 			wsprintf(string, TEXT("Time :%d  ms"),time1);
@@ -660,7 +658,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	return DefWindowProc(hWnd, message, wParam, lParam);
 }
 
-// Á¤º¸ ´ëÈ­ »óÀÚÀÇ ¸Ş½ÃÁö Ã³¸®±âÀÔ´Ï´Ù.
+// ì •ë³´ ëŒ€í™” ìƒìì˜ ë©”ì‹œì§€ ì²˜ë¦¬ê¸°ì…ë‹ˆë‹¤.
 INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
     UNREFERENCED_PARAMETER(lParam);
